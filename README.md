@@ -1,1 +1,1 @@
-# PLC_research
+# PLC_Omron
