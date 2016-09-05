@@ -8,3 +8,5 @@ hmi host link page 3 index
 connection mamnual
 http://www.pro-face.com/otasuke/files/manual/gpproex/new/device/omr.htm
 
+Modbus Conneting PLC with Rpi
+
