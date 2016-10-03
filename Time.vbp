@@ -1,0 +1,33 @@
+(*TimeBase Oneshot*)
+If TimeBase=true then
+	If not TimeBaseOsAux then TimeBaseOs:=true;
+	Else TimeBaseOs:=false;
+	End_if;
+End_if;
+
+(*TimeBase Oneshot Aux*)
+If TimeBase=true then TimeBaseOsAux:=true;
+	Else TimeBaseOsAux:=false;
+End_if;
+
+(*Start - increment timer*)
+If Start and TimeBaseOs and not Done  then
+	CurrentInternal:=CurrentInternal+1;
+End_if;
+
+(*Start off, reset timer*)
+If not Start then CurrentInternal:=0;
+End_if;
+
+(*Test for counter done*)
+If CurrentInternal>=Preset then Done:=true;
+	else Done:=false;
+End_If;
+
+(*Provide Timing output*)
+If Start and not Done then Running:=true;
+	else Running:=false;
+End_if;
+
+(*Ouput remaining time*)
+Remaining:=Preset-CurrentInternal;
